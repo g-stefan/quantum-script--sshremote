@@ -3,6 +3,6 @@
 # http://unlicense.org/
 # Created by Grigore Stefan <g_stefan@yahoo.com>
 
-echo "-> clean-local-release quantum-script-extension-sshremote"
+echo "-> clean-release quantum-script-extension-sshremote"
 
 rm -rf release
