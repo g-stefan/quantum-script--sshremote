@@ -7,4 +7,4 @@ echo -^> analyze quantum-script-extension-sshremote
 
 set CXX=cl /analyze /analyze:stacksize 65536 /analyze:max_paths 1024
 
-call port\build.msvc.make.cmd
+call build\msvc.make.cmd

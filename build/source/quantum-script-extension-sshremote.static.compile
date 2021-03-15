@@ -1,6 +1,6 @@
 --lib qse-sshremote
 --project-base=quantum-script-extension-sshremote
---source-is-separate
+--build-include
 --use-project=quantum-script.static
 --install-dev
 --install-inc=quantum-script-extension

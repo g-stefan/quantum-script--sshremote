@@ -18,5 +18,5 @@ cmdX(){
 }
 
 cmdX file-to-cs --touch=source/quantum-script-extension-sshremote.cpp --file-in=source/quantum-script-extension-sshremote.js --file-out=source/quantum-script-extension-sshremote.src --is-string --name=extensionSSHRemoteSource
-cmdX xyo-cc --mode=$ACTION @util/quantum-script-extension-sshremote.static.compile
-cmdX xyo-cc --mode=$ACTION @util/quantum-script-extension-sshremote.dynamic.compile
+cmdX xyo-cc --mode=$ACTION @build/source/quantum-script-extension-sshremote.static.compile
+cmdX xyo-cc --mode=$ACTION @build/source/quantum-script-extension-sshremote.dynamic.compile
