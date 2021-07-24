@@ -69,6 +69,10 @@ SSHRemote.getPlink = function(url) {
 	return null;
 };
 
+SSHRemote.getPlinkOptionPrivateKey = function(privateKeyFile) {
+	return "-i "+privateKeyFile;
+};
+
 SSHRemote.getPassword = function(url) {
 	var usernameAndPassword = URL.getUsernameAndPassword(url);
 	if(usernameAndPassword) {
@@ -374,3 +378,48 @@ SSHRemote.sudoReceiveX = function(url, source, destination) {
 	SSHRemote.cmd(url, "rm -f " + tempFileName);
 };
 
+SSHRemote.sudoGetCmdEncoded = function(url, cmd) {
+	var plink = .getPlink(url);
+	if(plink) {
+		var password = .getPassword(url);
+		if(password) {
+                                                         
+			password = password.replace("#", "\\\\043");
+			password = password.replace("$", "\\\\044");
+
+			return plink + " \"printf \\\"" + password + "\\\\n\\\" ^| sudo -S -i sh -c " + SSHRemote.encodeS("printf \"\\\\n\";" + cmd) + "\"";
+		};
+	};
+	return false;
+};
+
+SSHRemote.forwardSudoCmd = function(url, nextUrl, cmd) {
+	var nextPlink = .sudoGetCmdEncoded(nextUrl, cmd);
+	if(nextPlink) {
+		var plink = .getPlinkCmd(url, nextPlink);
+		if(plink) {
+			Shell.system(plink);
+			return true;
+		};
+	};
+	return false;
+};
+
+SSHRemote.forwardSudoCmdCapture = function(url, nextUrl, cmd) {
+	var nextPlink = .sudoGetCmdEncoded(nextUrl, cmd);
+	if(nextPlink) {
+		var plink = .getPlinkCmd(url, nextPlink);
+		if(plink) {
+			var rnd = new Random();
+			rnd.seed((new DateTime()).toUnixTime());
+			rnd.next();
+			var tempFile = "_ssh-remote_" + SHA512.hash(rnd.toInteger() + ":" + url) + ".capture";
+
+			Shell.system(plink + " >" + tempFile);
+			var capture = Shell.fileGetContents(tempFile);
+			Shell.remove(tempFile);
+			return capture;
+		};
+	};
+	return null;
+};
