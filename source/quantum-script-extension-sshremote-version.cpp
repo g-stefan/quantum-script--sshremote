@@ -15,10 +15,10 @@ namespace Quantum {
 			namespace SSHRemote {
 				namespace Version {
 
-					static const char *version_ = "2.1.0";
-					static const char *build_ = "19";
-					static const char *versionWithBuild_ = "2.1.0.19";
-					static const char *datetime_ = "2021-08-09 17:38:06";
+					static const char *version_ = "2.2.0";
+					static const char *build_ = "20";
+					static const char *versionWithBuild_ = "2.2.0.20";
+					static const char *datetime_ = "2021-11-15 16:51:54";
 
 					const char *version() {
 						return version_;
