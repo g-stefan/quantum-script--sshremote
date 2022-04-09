@@ -11,23 +11,23 @@
 #define QUANTUM_SCRIPT_EXTENSION_SSHREMOTE_HPP
 
 #ifndef QUANTUM_SCRIPT_HPP
-#include "quantum-script.hpp"
+#	include "quantum-script.hpp"
 #endif
 
 #ifndef QUANTUM_SCRIPT_EXTENSION_SSHREMOTE__EXPORT_HPP
-#include "quantum-script-extension-sshremote--export.hpp"
+#	include "quantum-script-extension-sshremote--export.hpp"
 #endif
 
 #ifndef QUANTUM_SCRIPT_EXTENSION_SSHREMOTE_COPYRIGHT_HPP
-#include "quantum-script-extension-sshremote-copyright.hpp"
+#	include "quantum-script-extension-sshremote-copyright.hpp"
 #endif
 
 #ifndef QUANTUM_SCRIPT_EXTENSION_SSHREMOTE_LICENSE_HPP
-#include "quantum-script-extension-sshremote-license.hpp"
+#	include "quantum-script-extension-sshremote-license.hpp"
 #endif
 
 #ifndef QUANTUM_SCRIPT_EXTENSION_SSHREMOTE_VERSION_HPP
-#include "quantum-script-extension-sshremote-version.hpp"
+#	include "quantum-script-extension-sshremote-version.hpp"
 #endif
 
 namespace Quantum {
@@ -46,4 +46,3 @@ namespace Quantum {
 };
 
 #endif
-

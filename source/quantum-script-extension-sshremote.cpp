@@ -12,15 +12,15 @@
 #include <string.h>
 
 #ifdef XYO_OS_TYPE_WIN
-#ifdef XYO_MEMORY_LEAK_DETECTOR
-#include "vld.h"
-#endif
+#	ifdef XYO_MEMORY_LEAK_DETECTOR
+#		include "vld.h"
+#	endif
 #endif
 
 #include "quantum-script-extension-sshremote-license.hpp"
 #include "quantum-script-extension-sshremote.hpp"
 #ifndef QUANTUM_SCRIPT_EXTENSION_SSHREMOTE_NO_VERSION
-#include "quantum-script-extension-sshremote-version.hpp"
+#	include "quantum-script-extension-sshremote-version.hpp"
 #endif
 
 #include "quantum-script-extension-sshremote.src"
@@ -52,7 +52,6 @@ namespace Quantum {
 					executive->setExtensionPublic(extensionId, true);
 
 					executive->compileStringX(extensionSSHRemoteSource);
-
 				};
 
 			};
@@ -65,4 +64,3 @@ extern "C" QUANTUM_SCRIPT_EXTENSION_SSHREMOTE_EXPORT void quantumScriptExtension
 	Quantum::Script::Extension::SSHRemote::initExecutive(executive, extensionId);
 };
 #endif
-

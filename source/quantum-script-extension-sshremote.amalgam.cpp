@@ -12,6 +12,5 @@
 #include "quantum-script-extension-sshremote-license.cpp"
 
 #ifndef QUANTUM_SCRIPT_EXTENSION_SSHREMOTE_NO_VERSION
-#include "quantum-script-extension-sshremote-version.cpp"
+#	include "quantum-script-extension-sshremote-version.cpp"
 #endif
-
