@@ -1,8 +1,0 @@
---dll qse-sshremote
---project-base=quantum-script-extension-sshremote
---build-include
---dll-no-version
---use-project=quantum-script
---install-dev
---install-inc=quantum-script-extension
---no-version

@@ -18,7 +18,7 @@
             "defines": [
                 "XYO_OS_WINDOWS",
                 "XYO_COMPILER_MSVC",
-                "XYO_APPLICATION_64BIT",
+                "XYO_SSHREMOTE_64BIT",
                 "XYO_MULTI_THREAD",
                 "XYO_PLATFORM=\"win64-msvc-2019\""
             ],
@@ -51,7 +51,7 @@
             "defines": [
                 "XYO_OS_UNIX",
                 "XYO_COMPILER_GCC",
-                "XYO_APPLICATION_64BIT",
+                "XYO_SSHREMOTE_64BIT",
                 "XYO_MULTI_THREAD",
                 "XYO_PLATFORM=\"ubuntu-focal\""
             ],
