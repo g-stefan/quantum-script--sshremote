@@ -1,15 +1,19 @@
 {
-	"project": {
-		"name":"quantum-script--sshremote",
-		"type":"xyo-cpp",
-		"make" : "lib-and-dll",
-		"SPDX-License-Identifier": "MIT",
-		"sourcePath" : "XYO/QuantumScript.Extension/SSHRemote",
-		"dependency" : [
-			"quantum-script",
-			"quantum-script--console"
+	"solution": {
+		"name" : "quantum-script--sshremote",
+		"type" : "xyo-cpp",
+		"projects": [
+			{
+				"name" : "quantum-script--sshremote",
+				"make" : "lib-and-dll",
+				"SPDX-License-Identifier": "MIT",
+				"sourcePath" : "XYO/QuantumScript.Extension/SSHRemote",
+				"dependency" : [
+					"quantum-script",
+					"quantum-script--console"
+				]
+			}
 		],
-		"hasRelease" : true,
-		"githubRelease" : true
+		"hasGithub" : true
 	}
 }
