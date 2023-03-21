@@ -19,7 +19,7 @@ namespace XYO::QuantumScript::Extension::SSHRemote {
 	void initExecutive(Executive *executive, void *extensionId) {
 
 		String info = "SSHRemote\r\n";
-		info << License::shortLicense();
+		info << License::shortLicense().c_str();
 
 		executive->setExtensionName(extensionId, "SSHRemote");
 		executive->setExtensionInfo(extensionId, info);

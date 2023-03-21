@@ -13,8 +13,8 @@
 
 namespace XYO::QuantumScript::Extension::SSHRemote::License {
 
-	XYO_QUANTUMSCRIPT_EXTENSION_SSHREMOTE_EXPORT const char *license();
-	XYO_QUANTUMSCRIPT_EXTENSION_SSHREMOTE_EXPORT const char *shortLicense();
+	XYO_QUANTUMSCRIPT_EXTENSION_SSHREMOTE_EXPORT std::string license();
+	XYO_QUANTUMSCRIPT_EXTENSION_SSHREMOTE_EXPORT std::string shortLicense();
 
 };
 
