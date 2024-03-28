@@ -8,4 +8,4 @@
 #include <XYO/QuantumScript.Extension/SSHRemote/Copyright.rh>
 #include <XYO/QuantumScript.Extension/SSHRemote/Version.rh>
 
-XYO_APPLICATION_VERSION_INFO(XYO_QUANTUMSCRIPT_EXTENSION_SSHREMOTE,"quantum-script--sshremote.dll","Quantum Script Extension SSHRemote")
+XYO_PLATFORM_VERSION_INFO(XYO_QUANTUMSCRIPT_EXTENSION_SSHREMOTE,"quantum-script--sshremote.dll","Quantum Script Extension SSHRemote")
