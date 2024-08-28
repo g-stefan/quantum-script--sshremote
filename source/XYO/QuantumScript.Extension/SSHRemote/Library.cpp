@@ -31,8 +31,10 @@ namespace XYO::QuantumScript::Extension::SSHRemote {
 
 };
 
-#ifdef XYO_PLATFORM_COMPILE_DYNAMIC_LIBRARY
+#ifndef XYO_QUANTUMSCRIPT_EXTENSION_SSHREMOTE_LIBRARY
+#	ifdef XYO_PLATFORM_COMPILE_DYNAMIC_LIBRARY
 extern "C" XYO_QUANTUMSCRIPT_EXTENSION_SSHREMOTE_EXPORT void quantumScriptExtension(XYO::QuantumScript::Executive *executive, void *extensionId) {
 	XYO::QuantumScript::Extension::SSHRemote::initExecutive(executive, extensionId);
 };
+#	endif
 #endif
